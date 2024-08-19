@@ -1,0 +1,9 @@
+services:
+   carv:
+    image: carvprotocol/verifier:alphanet
+    restart: unless-stopped
+    environment:
+     - GOMAXPROCS=2
+    volumes:
+     - ./config_docker.yaml:/data/conf/config_docker.yaml
+     - ./keystore:/data/keystore:rw
