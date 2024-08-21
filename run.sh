@@ -22,7 +22,7 @@ check_delegations() {
       ./verifier -conf $CONFIG_FILE
       break
     else
-      echo "Total delegations: $total_delegations. Retrying in 1 minute..."
+      echo "Waiting for delegation node address: $PUBLIC_KEY. Retrying in 1 minute..."
       sleep 60  # Wait for 1 minute before retrying
     fi
   done
