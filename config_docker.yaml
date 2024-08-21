@@ -27,7 +27,7 @@ wallet:
   # 2: through path and password of the keystore in config file
   mode: 1
   # plain text private key, needed when mode is 1
-  private_key: "xxxxxxx"
+  private_key: ""
   # path of the keystore, needed when mode is 2
   keystore_path: ""
   # password of the keystore, needed when mode is 2
