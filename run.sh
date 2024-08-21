@@ -1,5 +1,4 @@
 #!/bin/sh
-apt-get update -qq && apt-get install -y -qq curl jq
 
 CONFIG_DIR="/data/config"
 CONFIG_FILE="$CONFIG_DIR/config_docker.yaml"
