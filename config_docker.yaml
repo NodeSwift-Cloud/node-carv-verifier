@@ -35,7 +35,7 @@ wallet:
   # password of the keystore, needed when mode is 2
   keystore_password: ""
   reward_claimer_addr: "0x6FCb57aC813bFE7Fe864E779A8c7DC495f3b79b2"
-  commission_rate: 5
+  commission_rate: 2
 signature:
   domain_name: "ProtocolService"
   domain_version: "1.0.0"
