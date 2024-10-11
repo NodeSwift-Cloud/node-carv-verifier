@@ -9,7 +9,7 @@ curl -sL https://raw.githubusercontent.com/NodeSwift-Cloud/node-carv-verifier/ma
 
 sed -i "s/private_key: \"\"/private_key: \"$PRIVATE_KEY\"/" $CONFIG_FILE
 
-API_URL="https://interface.carv.io/explorer_alphanet/verifier_delegations_count?verifier_address=${PUBLIC_KEY}"
+API_URL="https://interface.carv.io/explorer/verifier_delegations_count?verifier_address=${PUBLIC_KEY}"
 
 check_delegations() {
   while true; do
