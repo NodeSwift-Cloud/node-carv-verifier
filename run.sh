@@ -11,21 +11,23 @@ sed -i "s/private_key: \"\"/private_key: \"$PRIVATE_KEY\"/" $CONFIG_FILE
 
 API_URL="https://interface.carv.io/explorer/verifier_delegations_count?verifier_address=${PUBLIC_KEY}"
 
-check_delegations() {
-  while true; do
-    response=$(curl -s $API_URL)
+# check_delegations() {
+#   while true; do
+#     response=$(curl -s $API_URL)
     
-    total_delegations=$(echo $response | jq -r '.data.total_delegations')
+#     total_delegations=$(echo $response | jq -r '.data.total_delegations')
 
-    if [ "$total_delegations" -gt 0 ]; then
-      echo "Total delegations: $total_delegations. Starting verifier..."
-      ./verifier -conf $CONFIG_FILE
-      break
-    else
-      echo "Waiting for delegation node address: $PUBLIC_KEY. Retrying in 1 minute..."
-      sleep 60  # Wait for 1 minute before retrying
-    fi
-  done
-}
+#     if [ "$total_delegations" -gt 0 ]; then
+#       echo "Total delegations: $total_delegations. Starting verifier..."
+#       ./verifier -conf $CONFIG_FILE
+#       break
+#     else
+#       echo "Waiting for delegation node address: $PUBLIC_KEY. Retrying in 1 minute..."
+#       sleep 60  # Wait for 1 minute before retrying
+#     fi
+#   done
+# }
 
-check_delegations
+# check_delegations
+
+./verifier -conf $CONFIG_FILE
